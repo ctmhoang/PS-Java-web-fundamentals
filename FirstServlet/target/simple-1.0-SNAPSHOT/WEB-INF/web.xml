@@ -6,13 +6,18 @@
          version="3.0">
 
     <servlet>
-        <servlet-name>Simple</servlet-name>
+        <servlet-name>SimpleServlet</servlet-name>
         <servlet-class>com.mantiso.SimpleServlet</servlet-class>
+        <init-param>
+            <param-name>connstr</param-name>
+            <param-value>server=homer;catalog=pubs;uid=sa;pwd=;</param-value>
+        </init-param>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>Simple</servlet-name>
+        <servlet-name>SimpleServlet</servlet-name>
         <url-pattern>*.do</url-pattern>
+        <url-pattern>/home</url-pattern>
     </servlet-mapping>
 
 </web-app>
