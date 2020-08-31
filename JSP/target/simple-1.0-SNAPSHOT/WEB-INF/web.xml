@@ -21,4 +21,8 @@
         <servlet-name>SimpleServlet</servlet-name>
         <url-pattern>/home</url-pattern>
     </servlet-mapping>
+
+    <error-page>
+        <location>/WEB-INF/errorpage.jsp</location>
+    </error-page>
 </web-app>
