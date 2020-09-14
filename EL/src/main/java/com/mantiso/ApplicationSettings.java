@@ -2,14 +2,25 @@ package com.mantiso;
 
 public class ApplicationSettings
 {
-    private String _formCssClass;
+    private CssClass _formCssClass;
+    private String[] _tabNames;
 
-    public String getFormCssClass()
+    public String[] getTabNames()
+    {
+        return _tabNames;
+    }
+
+    public void setTabNames(String[] _tabName)
+    {
+        this._tabNames = _tabName;
+    }
+
+    public CssClass getFormCssClass()
     {
         return _formCssClass;
     }
 
-    public void setFormCssClass(String formCssClass)
+    public void setFormCssClass(CssClass formCssClass)
     {
         this._formCssClass = formCssClass;
     }

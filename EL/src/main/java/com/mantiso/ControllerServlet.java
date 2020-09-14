@@ -15,7 +15,10 @@ public class ControllerServlet extends HttpServlet {
     public void init() throws ServletException
     {
         ApplicationSettings settings = new ApplicationSettings();
-        settings.setFormCssClass("blueUser");
+        CssClass tmp = new CssClass();
+        tmp.setName("redUser");
+        settings.setFormCssClass(tmp);
+        settings.setTabNames(new String[]{"SignIn","Home","Profile","Settings"});
         getServletContext().setAttribute("app", settings);
     }
 
