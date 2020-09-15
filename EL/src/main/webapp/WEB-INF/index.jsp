@@ -5,13 +5,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<%--    <title><%= application.getInitParameter("ProductName") %>--%>
+    <%--    <title><%= application.getInitParameter("ProductName") %>--%>
     <title>${initParam.ProductName}
-<%--        get the scope of whole application--%>
+        <%--        get the scope of whole application--%>
     </title>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <link href="metro-bootstrap-master/css/metro-bootstrap.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="app.css">
+    <%--    Give access to intricts obj
+    PageContext requestScope appicationScope paraValues headerValues initParam pageScope sessionScope param header cookie--%>
 </head>
 <body>
 <%@include file="_header.jsp" %>
@@ -56,9 +58,15 @@
                 <tabset>
                     <tab heading="Search">
                         <div class="${app["formCssClass"].name}">
-<%--                            actually it is a name after set and get method not field name--%>
+                            <%--                            actually it is a name after set and get method not field name--%>
                             <h2>Welcome ${user.name}</h2>
-<%--                            do not need to declare cuz it will search through all scope within servlet context from small to large--%>
+                            <%--                            do not need to declare cuz it will search through all scope within servlet context from small to large--%>
+
+                            <h3>EL ${user.name eq "Kevin"}</h3>
+                            <%--    + - * / div % mod eq== ne ==
+                             lt< gt> le <= ge >=
+                             && and ! not || or
+                             empty--%>
                             <form action="home" method="post">
                                 <p>
                                     Name: <input type="text" name="name"/>
