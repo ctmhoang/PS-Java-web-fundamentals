@@ -1,0 +1,8 @@
+com\mantiso\ApplicationSettings.class
+com\mantiso\Tab.class
+com\mantiso\Todo.class
+com\mantiso\CssClass.class
+com\mantiso\ControllerServlet.class
+com\mantiso\event\SimpleRequestListener.class
+com\mantiso\SimpleServlet.class
+com\mantiso\event\SimpleSessionListener.class
